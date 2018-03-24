@@ -5,6 +5,7 @@ Anyone Wants to contribute is always welcomed
 ##### Composer 
       Coming soon
 ##### Simple install
+
       Download or clone the repository and add the ` jwt.php ` file in your project directory
 ## how to Use
 ##### Two function are there with will create the token
@@ -21,79 +22,22 @@ Anyone Wants to contribute is always welcomed
  In ` validToken()` function will have the data , secret and the tokentobeverify will be passed as the argument
  
  ## Example
- 
- 
- 
  `
  <?php 
 namespace easy\Jwt;
-
 require_once('./jwt.php');
-
-
-/*
-                         _______________________
-
-           this is one of the method in this customisation can be done
-
-                       __________________________
-
-*/
 $jwt = new Jwt();
 
-/*
-                       _______________________
-
-
-                        this the header part
-
-
-                       ______________________ 
-
-*/
 $header =$jwt->getHeader();
-
-/*
-                       _______________________
-
-
-                        this the payload  part
-
-						your data will be the first parameter
-
-						Default sub claim is "auth" can br overwrite
-
-                       ______________________ 
-
-*/
 $payload =$jwt->getPayload(array("name" => "aniketh"));
-
-/*
-
----------------getSecret() will create the md5 hash of the parameter
----------------Default secret : "your secret here"
----------------Default salt : "your salt here"
-
-*/
-
-$secret =$jwt->getSecret("secret","salt"); 
-
-/*
-                       _______________________
-
-
-                        this the token creation part
-
-                       ______________________ 
-
-*/
-
+$secret =$jwt->getSecret("secret","salt");
 $token_with_1st_way = $jwt->createToken();
 
 
-
  $token_with_2nd_way =  Jwt::jwtFullEncode(["name" =>"aniketh"],"easy","qwerty");
- ?> `
+ ?>
+ 
+ `
 
  
  
