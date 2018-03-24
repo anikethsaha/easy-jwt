@@ -22,6 +22,7 @@ Anyone Wants to contribute is always welcomed
  
  ## Example
  
+ 
  `
  <?php 
 namespace easy\Jwt;
@@ -89,21 +90,11 @@ $secret =$jwt->getSecret("secret","salt");
 $token_with_1st_way = $jwt->createToken();
 
 
-/*
-                       _______________________
-
-
-                        this the 2nd way to get the token 
-
-
-                       ______________________ 
-
-*/
-
 
  $token_with_2nd_way =  Jwt::jwtFullEncode(["name" =>"aniketh"],"easy","qwerty");
  ?>
  `
+ 
  
  ## Contact Details
  Email : anik220798@gmail.com
