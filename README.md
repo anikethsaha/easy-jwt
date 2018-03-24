@@ -22,21 +22,7 @@ Anyone Wants to contribute is always welcomed
  In ` validToken()` function will have the data , secret and the tokentobeverify will be passed as the argument
  
  ## Example
- 
-` <?php 
-namespace easy\Jwt;
-require_once('./jwt.php');
-$jwt = new Jwt();
-
-$header =$jwt->getHeader();
-$payload =$jwt->getPayload(array("name" => "aniketh"));
-$secret =$jwt->getSecret("secret","salt");
-$token_with_1st_way = $jwt->createToken();
-
-
- $token_with_2nd_way =  Jwt::jwtFullEncode(["name" =>"aniketh"],"easy","qwerty");
- ?> `
-
+##### Check the example.php file
  
  
  ## Contact Details
