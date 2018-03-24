@@ -23,6 +23,7 @@ Anyone Wants to contribute is always welcomed
  ## Example
  
  
+ 
  `
  <?php 
 namespace easy\Jwt;
@@ -92,8 +93,8 @@ $token_with_1st_way = $jwt->createToken();
 
 
  $token_with_2nd_way =  Jwt::jwtFullEncode(["name" =>"aniketh"],"easy","qwerty");
- ?>
- `
+ ?> `
+
  
  
  ## Contact Details
